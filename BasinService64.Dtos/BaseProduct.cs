@@ -11,5 +11,7 @@ namespace BasinService64.Dtos
         public int ID { get; set; }
 
         public string Title { get; set; }
+
+        public string Article { get; set; }
     }
 }

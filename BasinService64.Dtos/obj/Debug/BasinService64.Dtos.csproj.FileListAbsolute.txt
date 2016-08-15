@@ -1,0 +1,5 @@
+D:\Reps\GIT\Basin64\BasinService64.Dtos\bin\Debug\BasinService64.Dtos.dll
+D:\Reps\GIT\Basin64\BasinService64.Dtos\bin\Debug\BasinService64.Dtos.pdb
+D:\Reps\GIT\Basin64\BasinService64.Dtos\obj\Debug\BasinService64.Dtos.csprojResolveAssemblyReference.cache
+D:\Reps\GIT\Basin64\BasinService64.Dtos\obj\Debug\BasinService64.Dtos.dll
+D:\Reps\GIT\Basin64\BasinService64.Dtos\obj\Debug\BasinService64.Dtos.pdb
