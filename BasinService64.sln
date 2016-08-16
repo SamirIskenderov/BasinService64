@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasinService64.Dtos", "Basi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasinService64.Dal", "BasinService64.Dal\BasinService64.Dal.csproj", "{A31D725F-D5CA-447E-B4FF-D13698274B6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasinService64.PL.WebPages", "BasinService64.PL.WebPages\BasinService64.PL.WebPages.csproj", "{0436FB10-6611-4837-ABA0-9ADAC6E0CFAA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{A31D725F-D5CA-447E-B4FF-D13698274B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A31D725F-D5CA-447E-B4FF-D13698274B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A31D725F-D5CA-447E-B4FF-D13698274B6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0436FB10-6611-4837-ABA0-9ADAC6E0CFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0436FB10-6611-4837-ABA0-9ADAC6E0CFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0436FB10-6611-4837-ABA0-9ADAC6E0CFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0436FB10-6611-4837-ABA0-9ADAC6E0CFAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
