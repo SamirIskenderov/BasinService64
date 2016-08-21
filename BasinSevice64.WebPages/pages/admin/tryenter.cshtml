@@ -1,9 +1,9 @@
 ﻿<div class="row">
     @if (IsPost && !User.Identity.IsAuthenticated)
     {
-        if (Request.Form["Code"] == "pass")
+        if (BasinSevice64.WebPages.Model.BRoleProvider.IsPassValid(Request.Form["Code"]))
         {
-            FormsAuthentication.SetAuthCookie("adbNFGhrrrty78653456dfsdfhgIIIdfsdkjhf", createPersistentCookie: true);
+            FormsAuthentication.SetAuthCookie(BasinSevice64.WebPages.Model.BRoleProvider.AdminName, createPersistentCookie: true);
         }
     }
     else if (User.Identity.IsAuthenticated)
