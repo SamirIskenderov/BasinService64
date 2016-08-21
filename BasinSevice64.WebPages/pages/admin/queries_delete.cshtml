@@ -1,0 +1,16 @@
+﻿@using BasinSevice64.WebPages.Model;
+
+@{
+    int id;
+
+    if (User.Identity.IsAuthenticated && int.TryParse(Request.Params["ID"], out id))
+    {
+        SolutionHelper.QDal.DeleteQuery(id);
+        Response.Redirect("~/pages/admin/queries.cshtml");
+    }
+    else
+    {
+        Response.StatusCode = 400;
+        Response.End();
+    }
+}

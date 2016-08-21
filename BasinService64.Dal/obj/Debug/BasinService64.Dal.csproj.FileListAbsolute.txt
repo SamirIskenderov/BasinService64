@@ -1,0 +1,7 @@
+D:\Reps\GIT\Basin64\BasinService64.Dal\bin\Debug\BasinService64.Dal.dll
+D:\Reps\GIT\Basin64\BasinService64.Dal\bin\Debug\BasinService64.Dal.pdb
+D:\Reps\GIT\Basin64\BasinService64.Dal\bin\Debug\BasinService64.Dtos.dll
+D:\Reps\GIT\Basin64\BasinService64.Dal\bin\Debug\BasinService64.Dtos.pdb
+D:\Reps\GIT\Basin64\BasinService64.Dal\obj\Debug\BasinService64.Dal.csprojResolveAssemblyReference.cache
+D:\Reps\GIT\Basin64\BasinService64.Dal\obj\Debug\BasinService64.Dal.dll
+D:\Reps\GIT\Basin64\BasinService64.Dal\obj\Debug\BasinService64.Dal.pdb

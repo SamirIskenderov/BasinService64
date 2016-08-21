@@ -43,6 +43,7 @@
     <Compile Include="BaseFilter.cs" />
     <Compile Include="BaseProduct.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="QueryDto.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

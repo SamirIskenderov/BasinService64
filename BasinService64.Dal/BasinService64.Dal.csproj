@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BaseProductDao.cs" />
     <Compile Include="ProductDao.cs" />
+    <Compile Include="QueriesDal.cs" />
     <Compile Include="ServiceDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

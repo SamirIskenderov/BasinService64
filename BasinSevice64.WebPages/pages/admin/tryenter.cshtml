@@ -1,0 +1,41 @@
+﻿<div class="row">
+    @if (IsPost && !User.Identity.IsAuthenticated)
+    {
+        if (Request.Form["Code"] == "pass")
+        {
+            FormsAuthentication.SetAuthCookie("adbNFGhrrrty78653456dfsdfhgIIIdfsdkjhf", createPersistentCookie: true);
+        }
+    }
+    else if (User.Identity.IsAuthenticated)
+    {
+        <div class="col-lg-12">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    Вы уже вошли.
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <a href="~/pages/admin/sign_out.cshtml" class="btn btn-default">
+                    Выйти
+                </a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <form method="post" enctype="multipart/form-data">
+            <div class="col-lg-8">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <div class="form-group" id="Code">
+                            <input type="text" class="form-control" id="Code" name="Code" placeholder="Code">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <button type="submit" class="btn btn-default btn-block">Отправить</button>
+                </div>
+            </div>
+        </form>
+    }
+</div>

@@ -42,3 +42,7 @@ D:\Reps\GIT\Basin64\BasinSevice64.WebPages\bin\System.Web.WebPages.Razor.xml
 D:\Reps\GIT\Basin64\BasinSevice64.WebPages\obj\Debug\BasinSevice64.WebPages.csprojResolveAssemblyReference.cache
 D:\Reps\GIT\Basin64\BasinSevice64.WebPages\obj\Debug\BasinSevice64.WebPages.dll
 D:\Reps\GIT\Basin64\BasinSevice64.WebPages\obj\Debug\BasinSevice64.WebPages.pdb
+D:\Reps\GIT\Basin64\BasinSevice64.WebPages\bin\BasinService64.Dal.dll
+D:\Reps\GIT\Basin64\BasinSevice64.WebPages\bin\BasinService64.Dtos.dll
+D:\Reps\GIT\Basin64\BasinSevice64.WebPages\bin\BasinService64.Dal.pdb
+D:\Reps\GIT\Basin64\BasinSevice64.WebPages\bin\BasinService64.Dtos.pdb

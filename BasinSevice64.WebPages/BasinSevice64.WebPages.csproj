@@ -124,6 +124,15 @@
     </Content>
     <Content Include="index.cshtml" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="pages\abon_service.cshtml" />
+    <Content Include="pages\kons_dekons.cshtml" />
+    <Content Include="pages\entity_service.cshtml" />
+    <Content Include="pages\bas_repair.cshtml" />
+    <Content Include="pages\query.cshtml" />
+    <Content Include="pages\admin\queries.cshtml" />
+    <Content Include="pages\admin\tryenter.cshtml" />
+    <Content Include="pages\admin\sign_out.cshtml" />
+    <Content Include="pages\admin\queries_delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,10 +166,19 @@
     <Content Include="_PageStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\BRoleProvider.cs" />
+    <Compile Include="Model\SolutionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="pages\" />
+    <ProjectReference Include="..\BasinService64.Dal\BasinService64.Dal.csproj">
+      <Project>{a31d725f-d5ca-447e-b4ff-d13698274b6b}</Project>
+      <Name>BasinService64.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BasinService64.Dtos\BasinService64.Dtos.csproj">
+      <Project>{06fda52a-a889-4b3f-9fe1-2a7317cb0ab5}</Project>
+      <Name>BasinService64.Dtos</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
