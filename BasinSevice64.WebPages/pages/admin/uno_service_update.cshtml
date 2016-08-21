@@ -1,0 +1,71 @@
+﻿@{
+    var testResult = true;
+    var hasError = "";
+    var unoService = new BasinService64.Dtos.UnoServiceDto();
+    int id = 0;
+}
+
+@if (IsPost)
+{
+    unoService = new BasinService64.Dtos.UnoServiceDto()
+    {
+        ID = Convert.ToInt32(Request.Form["Id"]),
+        Title = Request.Form["Title"],
+        Price = Request.Form["Price"],
+        Annotation = Request.Form["Annotation"]
+    };
+
+    if (!string.IsNullOrWhiteSpace(unoService.Title))
+    {
+        BasinSevice64.WebPages.Model.SolutionHelper.USDal.UpdateUnoService(unoService);
+
+        Response.Redirect("~/pages/entity_service.cshtml");
+    }
+
+    testResult = false;
+    hasError = "has-error";
+}
+else if (!int.TryParse(Request.Params["ID"], out id))
+{
+    Response.StatusCode = 400;
+    Response.End();
+}
+else
+{
+    unoService = BasinSevice64.WebPages.Model.SolutionHelper.USDal.GetUnoService(id);
+}
+
+<div class="row">
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-lg-8">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Изменить разовую услугу</h3>
+                </div>
+                <div class="panel-body">
+                    @if (!testResult)
+                    {
+                        <p class="text-danger">Заполните необходимое поле.</p>
+                    }
+                    <div class="form-group @hasError" id="Title">
+                        <label for="Title">Название</label>
+                        <input type="text" class="form-control" id="Title" name="Title" placeholder="Название" value="@unoService.Title">
+                    </div>
+                    <div class="form-group" id="Price">
+                        <label for="Price">Цена</label>
+                        <input type="text" class="form-control" id="Price" name="Price" placeholder="Цена" value="@unoService.Price">
+                    </div>
+                    <div class="form-group" id="Annotation">
+                        <label for="Annotation">Примечание</label>
+                        <input type="text" class="form-control" id="Annotation" name="Annotation" placeholder="Примечание" value="@unoService.Annotation">
+                    </div>
+                    <input type="hidden" name="Id" value="@unoService.ID" />
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <button type="submit" class="btn btn-default btn-block">Сохранить</button>
+            </div>
+        </div>
+    </form>
+</div>
+

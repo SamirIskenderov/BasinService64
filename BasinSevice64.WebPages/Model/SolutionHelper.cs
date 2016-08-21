@@ -13,6 +13,7 @@ namespace BasinSevice64.WebPages.Model
     public static class SolutionHelper
     {
         public static QueriesDal QDal { get; } = new QueriesDal();
+        public static UnoServicesDal USDal { get; } = new UnoServicesDal();
 
         public static void TrySendEmail(QueryDto query)
         {

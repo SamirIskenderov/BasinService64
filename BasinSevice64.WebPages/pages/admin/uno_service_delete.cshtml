@@ -1,0 +1,16 @@
+﻿@using BasinSevice64.WebPages.Model;
+
+@{
+    int id;
+
+    if (User.Identity.IsAuthenticated && int.TryParse(Request.Params["ID"], out id))
+    {
+        SolutionHelper.USDal.DeleteUnoService(id);
+        Response.Redirect("~/pages/entity_service.cshtml");
+    }
+    else
+    {
+        Response.StatusCode = 400;
+        Response.End();
+    }
+}

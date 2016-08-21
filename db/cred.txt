@@ -2,3 +2,5 @@ BasinService
 basinservice@mail.ru
 basinpass64ggy
 
+Data Source=SQL5024.SmarterASP.NET;Initial Catalog=DB_A0BDB9_basinservice;User Id=DB_A0BDB9_basinservice_admin;Password=basinpass64ggy;
+

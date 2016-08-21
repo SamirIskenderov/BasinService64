@@ -134,6 +134,9 @@
     <Content Include="pages\admin\sign_out.cshtml" />
     <Content Include="pages\admin\queries_delete.cshtml" />
     <Content Include="pages\query_success.cshtml" />
+    <Content Include="pages\admin\uno_service_add.cshtml" />
+    <Content Include="pages\admin\uno_service_delete.cshtml" />
+    <Content Include="pages\admin\uno_service_update.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
