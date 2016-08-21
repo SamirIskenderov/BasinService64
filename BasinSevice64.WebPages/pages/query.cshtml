@@ -1,57 +1,66 @@
-﻿<div class="row">
-    @if (IsPost)
-    {
-        var query = new BasinService64.Dtos.QueryDto()
-        {
-            Name = Request.Form["Name"],
-            Message = Request.Form["Message"],
-            Email = Request.Form["Email"],
-            PhoneNumber = Request.Form["PhoneNumber"],
-            Date = DateTime.Now
-        };
+﻿@{ 
+    var testResult = true;
+    var hasError = "";
+    var query = new BasinService64.Dtos.QueryDto();
+}
 
+@if (IsPost)
+{
+    query = new BasinService64.Dtos.QueryDto()
+    {
+        Name = Request.Form["Name"],
+        Message = Request.Form["Message"],
+        Email = Request.Form["Email"],
+        PhoneNumber = Request.Form["PhoneNumber"],
+        Date = DateTime.Now
+    };
+
+    if (!string.IsNullOrWhiteSpace(query.PhoneNumber) || !string.IsNullOrWhiteSpace(query.Email))
+    {
         BasinSevice64.WebPages.Model.SolutionHelper.QDal.AddQuery(query);
         BasinSevice64.WebPages.Model.SolutionHelper.TrySendEmail(query);
 
-        <div class="col-lg-12">
+        Response.Redirect("~/pages/query_success.cshtml");
+    }
+
+    testResult = false;
+    hasError = "has-error";
+}
+
+<div class="row">
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-lg-8">
             <div class="panel panel-info">
-                <div class="panel-body">
-                    Спасибо! Ваш запрос отправлен. Мы обязательно свяжемся с Вами по указанным Вами контактам.
+                <div class="panel-heading">
+                    <h3 class="panel-title">Отправить запрос</h3>
                 </div>
+                <div class="panel-body">
+                    @if (!testResult)
+                    {
+                        <p class="text-danger">Пожалуйста, заполните одно из необходимых полей, чтобы мы могли связаться с Вами.</p>
+                                
+                    }
+                    <div class="form-group" id="Name">
+                        <label for="Surname">Имя</label>
+                        <input type="text" class="form-control" id="Name" name="Name" placeholder="Имя" value="@query.Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Message">Сообщение</label>
+                        <textarea class="form-control nonresizable" rows="4" id="Message" name="Message" placeholder="Сообщение">@query.Message</textarea>
+                    </div>
+                    <div class="form-group @hasError" id="PhoneNumber">
+                        <label for="PhoneNumber">Номер телефона</label>
+                        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Номер телефона" value="@query.PhoneNumber">
+                    </div>
+                    <div class="form-group @hasError" id="Email">
+                        <label for="Email">Электронная почта</label>
+                        <input type="text" class="form-control" id="Email" name="Email" placeholder="Электронная почта" value="@query.Email">
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <button type="submit" class="btn btn-default btn-block">Отправить</button>
             </div>
         </div>
-    }
-    else
-    {
-        <form method="post" enctype="multipart/form-data">
-            <div class="col-lg-8">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Отправить запрос</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="form-group" id="Name">
-                            <label for="Surname">Имя</label>
-                            <input type="text" class="form-control" id="Name" name="Name" placeholder="Имя">
-                        </div>
-                        <div class="form-group">
-                            <label for="Message">Сообщение</label>
-                            <textarea class="form-control nonresizable" rows="4" id="Message" name="Message" placeholder="Сообщение"></textarea>
-                        </div>
-                        <div class="form-group" id="PhoneNumber">
-                            <label for="PhoneNumber">Номер телефона</label>
-                            <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Номер телефона">
-                        </div>
-                        <div class="form-group" id="Email">
-                            <label for="Email">Электронная почта</label>
-                            <input type="text" class="form-control" id="Email" name="Email" placeholder="Электронная почта">
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <button type="submit" class="btn btn-default btn-block">Отправить</button>
-                </div>
-            </div>
-        </form>
-    }
+    </form>
 </div>

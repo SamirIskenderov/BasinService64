@@ -133,6 +133,7 @@
     <Content Include="pages\admin\tryenter.cshtml" />
     <Content Include="pages\admin\sign_out.cshtml" />
     <Content Include="pages\admin\queries_delete.cshtml" />
+    <Content Include="pages\query_success.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
